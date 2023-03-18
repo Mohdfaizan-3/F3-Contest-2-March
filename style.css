@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+html {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+
+.wrapper {
+  width: 100vw;
+  height: 100dvh;
+  overflow: auto; /* Adding overflow: auto; will establish a new
+  block formatting context and prevent the .wrapper element from collapsing*/
+}
+
+
+button {
+  all: unset;
+}
