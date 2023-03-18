@@ -58,10 +58,8 @@ const promiseAPI3 = function () {
     }, 3000);
   });
 };
-
-document
-  .querySelector(".btn")
-  .addEventListener("click", () => {
+const btn = document.querySelector(".btn");
+  btn.addEventListener("click", () => {
     promiseAPI1()
       .then((response) => {
         if (response) {
@@ -88,13 +86,13 @@ document
 function render1(posts) {
   const data = posts.posts;
   //console.log(data);
-
+  btn.classList.add("active");
   data.forEach((post) => {
     const html = `
       <div class="post">
-        <p>User Id: ${post.userId}</p>
-        <p>${post.title}</p>
-        <p>status: ${post.body}</p>
+        <p><span style="text-transform: capitalize; font-size: medium; font-weight: 700;">User Id:</span> ${post.userId}</p>
+        <p><span style="text-transform: capitalize; font-size: medium; font-weight: 700;">Title:</span> ${post.title}</p>
+        <p><span style="text-transform: capitalize; font-size: medium; font-weight: 700;">Body: </span>${post.body}</p>
         </div>
     `;
 
@@ -105,16 +103,17 @@ function render1(posts) {
 
 function render2(products) {
   //console.log(products);
+  btn.classList.add("active");
   const data = products.products;
   //console.log(data);
 
   data.forEach((product) => {
     const html = `
-      <div class="item">
+      <div class="product">
             <h3>${product.title}</h3>
             <img src="${product.thumbnail}" alt="">
             <p>${product.description}</p>
-            <p>${product.price}</p>
+            <p>₹: ${product.price}</p>
           </div>
     `;
 
@@ -128,15 +127,18 @@ function render2(products) {
 
 function render3(todos) {
  // console.log(todos);
+ btn.classList.add("active");
   const data = todos.todos;
   //console.log(data);
 
   data.forEach((todo) => {
     const html = `
-      <div class="item">
-              <h3>${todo.userId}</h3>
+      <div class="todo">
+              <h3>User ID: ${todo.userId}</h3>
               <p>${todo.todo}</p>
-              <p>${todo.completed}</p>
+              <p  class="${
+                todo.completed ? "green" : "red"
+              }">${todo.completed} </p>
       </div>
     `;
 

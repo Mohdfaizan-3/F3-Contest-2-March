@@ -13,25 +13,104 @@ body {
   min-height: 100vh;
 }
 
-
 .wrapper {
   width: 100vw;
   height: 100dvh;
   overflow: auto; /* Adding overflow: auto; will establish a new
   block formatting context and prevent the .wrapper element from collapsing*/
+  padding: 2em;
 }
-
 
 button {
   all: unset;
 }
+.btn-container {
+  margin-bottom: 2em;
+}
 
+.btn {
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  border: solid 5px salmon;
+  padding: 1em;
+  background-color: black;
+  color: white;
+}
+
+.btn.active {
+  display: none;
+}
 
 .data-container {
   display: flex;
-
+  column-gap: 1.5em;
 }
 
 .data-container > div {
-    flex: 1;
+  flex: 1;
+}
+
+.post-container {
+  border: solid 1px black;
+  padding: 1em;
+  background-color: blue;
+  border-radius: 25px;
+}
+
+.post {
+  margin: 1.5em 0;
+  background-color: yellow;
+  border-radius: 20px;
+  padding: 0.5em;
+  text-align: justify;
+  text-align: justify;
+}
+
+.post p {
+  margin-bottom: 1em;
+}
+
+.product-container {
+  padding: 1em;
+  background-color: pink;
+  border: solid 1px black;
+  border-radius: 20px;
+}
+
+.product {
+  padding: 1em;
+  max-width: 100%;
+}
+
+.product img,
+h3,
+p {
+  width: 100%;
+  margin-bottom: .7em;
+  border-radius: 10px;
+}
+
+.todos-container {
+  padding: 1em;
+
+  border: solid 1px black;
+  border-radius: 20px;
+  background-color: wheat;
+}
+
+.todo {
+  padding: 1em;
+  background-color: black;
+  color: white;
+   border: solid 1px white;
+  border-radius: 20px;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
 }
