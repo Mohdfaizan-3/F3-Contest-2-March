@@ -25,3 +25,13 @@ body {
 button {
   all: unset;
 }
+
+
+.data-container {
+  display: flex;
+
+}
+
+.data-container > div {
+    flex: 1;
+}
